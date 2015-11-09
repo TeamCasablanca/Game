@@ -19,7 +19,7 @@ public class Game implements Runnable {
 
     private boolean isRunning;
 
-    private int lineResolution = display.HEIGHT / 10; //MAX is display.HEIGHT
+    private int lineResolution = display.HEIGHT / 1; //MAX is display.HEIGHT
     private int[] xLine = new int[lineResolution];
     private int[] yLine = new int[lineResolution];
 
@@ -81,6 +81,9 @@ public class Game implements Runnable {
 
         g.drawPolyline(this.xLine, this.yLine, lineResolution);
         //end drawing/animation;
+        g.drawRect(100,100,200,200);
+        g.drawArc(100,100,50,50,0,90);
+
 
         this.g.dispose();
         this.bs.show();
